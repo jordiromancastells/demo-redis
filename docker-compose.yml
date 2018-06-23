@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  redis-server:
+    build:
+      context: redis-server
+    ports:
+      - 6379:6379
+    labels: 
+      NAME: "redis-server"
+    networks: 
+      - public
+    
+networks:
+  public:
+    external:
+      name: public
+  internal:
+
+
+
+  
